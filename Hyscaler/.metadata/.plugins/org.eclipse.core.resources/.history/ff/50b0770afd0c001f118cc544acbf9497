@@ -1,0 +1,7 @@
+package com.hyscaler.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IUserREpo extends JpaRepository<T, ID> {
+
+}

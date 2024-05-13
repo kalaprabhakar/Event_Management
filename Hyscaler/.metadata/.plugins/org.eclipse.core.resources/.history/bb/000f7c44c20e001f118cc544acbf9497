@@ -1,0 +1,46 @@
+package com.hyscaler.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hyscaler.model.Events;
+import com.hyscaler.model.User;
+import com.hyscaler.repo.IEventRepo;
+import com.hyscaler.repo.IUserRepo;
+
+@Service
+public class UserServiceMngmImpl implements IUserService {
+
+	@Autowired
+	private IUserRepo repo;
+
+	@Autowired
+	private IEventRepo repo1;
+
+	@Override
+	public int saveUSer(User u) {
+
+		return repo.save(u).getId();
+	}
+
+	@Override
+	public User findUSer(String email) {
+
+		return repo.findByEmail(email);
+	}
+
+	@Override
+	public Events saveEvents(Events e) {
+		// TODO Auto-generated method stub
+		return repo1.save(e);
+	}
+
+	@Override
+	public List<Events> getAllEvents() {
+		
+		return repo1.findAll();
+	}
+
+}

@@ -1,0 +1,6 @@
+spring.application.name=Event_Management_System
+
+#View Resolver Details
+
+spring.mvc.view.prefix=/WEB-INF/pages/
+spring.mvc.view.suffix=.jsp

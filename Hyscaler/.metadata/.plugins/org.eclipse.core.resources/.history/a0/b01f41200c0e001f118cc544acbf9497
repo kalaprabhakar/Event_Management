@@ -1,0 +1,5 @@
+package com.hyscaler.services;
+
+public interface IEventsServices {
+
+}

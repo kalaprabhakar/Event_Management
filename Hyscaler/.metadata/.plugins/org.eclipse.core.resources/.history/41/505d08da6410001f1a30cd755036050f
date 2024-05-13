@@ -1,0 +1,9 @@
+package com.hyscaler.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.hyscaler.model.Ticket;
+
+public interface ITicketRepo extends JpaRepository<Ticket, Integer> {
+
+}

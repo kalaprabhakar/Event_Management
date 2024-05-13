@@ -1,0 +1,19 @@
+package com.hyscaler.services;
+
+
+import com.hyscaler.model.Events;
+import com.hyscaler.model.User;
+
+public interface IUserService {
+	
+	public int saveUSer(User u);
+	
+	public User findUSer(String email);
+	
+	public int saveEvents(Events e);
+	
+
+	
+	
+
+}

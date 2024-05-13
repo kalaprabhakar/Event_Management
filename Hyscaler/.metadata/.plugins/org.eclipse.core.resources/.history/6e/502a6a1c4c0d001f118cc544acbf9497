@@ -1,0 +1,74 @@
+ <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div id="sidebar" class="container-fluid bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
+        <nav id="sidebar" class="bg-dark">
+            <div class="sidebar-header bg-dark">
+                <h3><img src="images/user.png" class="mr-2" width="30" height="30">ADMIN</h3>
+                
+            </div>
+				<hr class="bg-info">
+            <ul class="list-unstyled components">
+                <p></p>
+                <!-- 
+                	<li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                 -->
+                <li>
+                    <a href="/adminhome"><img src="images/dashboard.png" class="mr-2" width="30" height="30" >Dashboard</a>
+                </li>
+                <li>
+                    <a href="/adminuserdetails"><img src="images/userlist.png" class="mr-2" width="30" height="30"> Users List</a>
+                </li>
+                
+                <li>
+                    <a href="/admineventdetails"><img src="images/event.png" class="mr-2" width="30" height="30" >Events</a>
+                </li>
+                
+                
+                
+                <li>
+                    <a href="/adminbookingdetails"><img src="images/bookingdetails.png" class="mr-2" width="30" height="30" >Booking Details</a>
+                </li>
+                <li>
+                    <a href="/adminbookingdetails"><img src="images/bookingdetails.png" class="mr-2" width="30" height="30" >Venue</a>
+                </li>
+                
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                
+                <li>
+                    <a href="/adminlogout" class="article"><img src="images/logout.png" width="30" height="30"><span class="ml-2"></span><span class="mr-3">Logout</span></a>
+                </li>
+            </ul>
+        </nav>
+
+    
+    

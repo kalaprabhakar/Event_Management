@@ -1,0 +1,9 @@
+package com.hyscaler.services;
+
+import com.hyscaler.model.User;
+
+public interface IUserService {
+	
+	public int saveUSer(User u);
+
+}

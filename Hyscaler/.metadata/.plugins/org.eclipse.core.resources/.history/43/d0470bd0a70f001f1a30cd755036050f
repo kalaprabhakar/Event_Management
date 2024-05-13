@@ -1,0 +1,6 @@
+// firts request to server to create order
+
+ const paymentStart = ()=>{
+	 
+	 window.alert("hi");
+ }

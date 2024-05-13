@@ -1,0 +1,13 @@
+package com.hyscaler.services;
+
+import com.hyscaler.model.User;
+
+public class UserServiceMngmImpl implements IUserService {
+
+	@Override
+	public int saveUSer(User u) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

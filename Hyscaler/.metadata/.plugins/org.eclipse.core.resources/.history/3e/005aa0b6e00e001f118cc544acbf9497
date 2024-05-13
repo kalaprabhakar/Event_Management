@@ -1,0 +1,14 @@
+package com.hyscaler.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.hyscaler.model.Events;
+
+public interface IEventRepo extends JpaRepository<Events, Integer> {
+	
+	
+	@Query("select count(*) from Events")
+	public int totalEvents();
+
+}

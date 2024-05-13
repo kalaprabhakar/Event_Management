@@ -1,0 +1,20 @@
+package com.hyscaler;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EventManagementSystemApplication {
+	
+	
+	private String cilentId;
+	
+	private String clientSecret;
+	
+	private String mode;
+
+	public static void main(String[] args) {
+		SpringApplication.run(EventManagementSystemApplication.class, args);
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.hyscaler.services;
+
+
+import java.util.List;
+
+import com.hyscaler.model.Events;
+import com.hyscaler.model.User;
+
+import io.micrometer.observation.Observation.Event;
+
+public interface IUserService {
+	
+	public int saveUSer(User u);
+	
+	public User findUSer(String email);
+	
+	public Events saveEvents(Events e);
+	
+	public List<Events> getAllEvents();
+	
+	public Event getEventById(int id);
+	
+
+	
+	
+
+}

@@ -1,0 +1,120 @@
+package com.hyscaler.cotroller;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.hyscaler.model.Events;
+import com.hyscaler.model.User;
+import com.hyscaler.services.IUserService;
+
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class HomeEventManagementController {
+	
+	@Autowired
+	private IUserService service;
+	
+	
+	@GetMapping("/")
+	public String getIndexPage() {
+		return "index";
+	}
+	@GetMapping({"/login","/registration","/contactus","/aboutus","/admin_home","user_home","organizer_home"})
+	public String hometools() {
+		return null;
+	}
+	
+	@PostMapping("/registration")
+	public String UserRegistration(@ModelAttribute("user") User u , Map<String, Object> map) {
+		
+		Integer id =service.saveUSer(u);
+		
+		return "redirect:login";
+		
+		
+		
+	}
+	
+	@PostMapping("/login-validation")
+	public String loginUserAndAdmin( @ModelAttribute("user") User u , HttpSession session) {
+		
+		
+		User userDetails =  service.findUSer(u.getEmail());
+		
+		if(userDetails!=null) {
+			if(u.getPassword().equals(userDetails.getPassword())) {
+				
+				if(userDetails.getRole().equals("organizer")) {
+					
+					session.setAttribute("Admin_firstname",userDetails.getFirstName());
+					session.setAttribute("Admin_lastname", userDetails.getLastName());
+					session.setAttribute("Admin_email", userDetails.getEmail());
+					session.setAttribute("Admin_phone", userDetails.getContactNo());
+					session.setAttribute("Admin_address", userDetails.getAddress());
+					session.setAttribute("Admin_gender", userDetails.getGender());
+					session.setAttribute("Admin_id", userDetails.getId());
+					session.setAttribute("Admin_password", userDetails.getPassword());
+					session.setAttribute("Admin_role", userDetails.getRole());
+					return "organizer_home";
+					
+				}else if(userDetails.getRole().equals("user")) {
+					
+					session.setAttribute("User_firstname",userDetails.getFirstName());
+					session.setAttribute("User_lastname", userDetails.getLastName());
+					session.setAttribute("User_email", userDetails.getEmail());
+					session.setAttribute("User_phone", userDetails.getContactNo());
+					session.setAttribute("User_address", userDetails.getAddress());
+					session.setAttribute("User_gender", userDetails.getGender());
+					session.setAttribute("User_id", userDetails.getId());
+					session.setAttribute("User_cpassword", userDetails.getConformPassword());
+					session.setAttribute("User_password", userDetails.getPassword());
+					session.setAttribute("User_role", userDetails.getRole());
+					return "user_home";
+					
+				}else {
+					session.setAttribute("Admin_firstname",userDetails.getFirstName());
+					session.setAttribute("Admin_lastname", userDetails.getLastName());
+					session.setAttribute("Admin_email", userDetails.getEmail());
+					session.setAttribute("Admin_phone", userDetails.getContactNo());
+					session.setAttribute("Admin_address", userDetails.getAddress());
+					session.setAttribute("Admin_gender", userDetails.getGender());
+					session.setAttribute("Admin_id", userDetails.getId());
+					session.setAttribute("Admin_password", userDetails.getPassword());
+					session.setAttribute("Admin_role", userDetails.getRole());
+					return "admin_home";
+					
+				}
+				
+			}
+		}
+		
+		return "loginfail";
+		
+	
+		
+		
+	}
+	
+	@GetMapping("/addevent")
+	public String addingEvents() {
+		
+		return "add_event";
+		
+	}
+	
+	@PostMapping("/addevent")
+	public String createEvent( @ModelAttribute("event") Events e , Map<String,Object> map) {
+		
+		System.out.println(e);
+		
+		
+		return "redirect:add_event";
+	}
+
+}

@@ -1,0 +1,13 @@
+// firts request to server to create order
+
+ const paymentStart = ()=>{
+	 
+	 
+	 $.ajax(
+		 {
+			 url='user/create_order',
+			 
+		 }
+	 )
+	 
+ };

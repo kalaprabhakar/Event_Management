@@ -1,0 +1,51 @@
+        <nav id="sidebar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div  class="container-fluid">
+   <h3><a class="navbar-brand" href="#"><img src="images/user.png" class="mr-2" width="30" height="30">ADMIN</a></h3>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <div class="navbar-nav">
+        <a class="nav-link " aria-current="page" href="#"><img src="images/dashboard.png" class="mr-2" width="30" height="30" >Dashboard</a>
+        <a class="nav-link" href="#"><img src="images/userlist.png" class="mr-2" width="30" height="30">User List</a>
+        <a class="nav-link" href="#"><img src="images/event.png" class="mr-2" width="30" height="30" >Events</a>
+        <a class="nav-link" href="#"><img src="images/bookingdetails.png" class="mr-2" width="30" height="30" >Booking Details</a>
+        <a class="nav-link" href="#"><img src="images/bookingdetails.png" class="mr-2" width="30" height="30" >Venue</a>
+        <div class="d-flex">
+        <a href="#" style="text-align: left;">logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+   
+ 
+
+    
+    
