@@ -24,7 +24,7 @@
   * Paypal
   * Apache Tomcat 10.1
  # Screenshots
- ![Screenshot (125)](https://github.com/kalaprabhakar/Hyscaler/assets/137256829/177f1f05-5992-45a3-801e-9ce3b95cba00)
+![Screenshot (142)](https://github.com/kalaprabhakar/Hyscaler/assets/137256829/e47ea249-32a4-4908-b4f9-03db238b2ab1)
 ![Screenshot (126)](https://github.com/kalaprabhakar/Hyscaler/assets/137256829/4a55630c-391c-446c-b60e-1dc46f5f9313)
 ![Screenshot (128)](https://github.com/kalaprabhakar/Hyscaler/assets/137256829/bcf896e8-7b3e-4559-b478-fba0f55ed3e1)
 ![Screenshot (129)](https://github.com/kalaprabhakar/Hyscaler/assets/137256829/94d5b005-7f80-4315-95fe-c928215f3a16)
